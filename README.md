@@ -12,19 +12,19 @@ Live Demo:
 </p>
 
 <p align="center">
-   <img src="/public/images/addIncome.png" width="900" />
+   <img src="/public/screenshots/addIncome.png" width="900" />
 </p>
 <p align="center">
-   <img src="/public/images/transations.png" width="900" />
+   <img src="/public/screenshots/transations.png" width="900" />
 </p>
 <p align="center">
-   <img src="/public/images/bills.png" width="900" />
+   <img src="/public/screenshots/bills.png" width="900" />
 </p>
 <p align="center">
-   <img src="/public/images/addExpense.png" width="500" />
+   <img src="/public/screenshots/addExpense.png" width="500" />
 </p>
 <p align="center">
-   <img src="/public/images/mobile.png" width="500" />
+   <img src="/public/screenshots/mobile.png" width="500" />
 </p>
 
 <h3>Overview</h3>

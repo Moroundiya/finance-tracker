@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h3>Frontend Developer Assessment (Finance Tracker)</h3>
 
-## Getting Started
+You can view the live project here:
 
-First, run the development server:
+Live Demo:
+👉 https://your-live-link.com
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<h3>Screenshots</h3>
+
+<p align="center">
+  <img src="/public/screenshots/dashboard.png" width="900" />
+</p>
+
+<p align="center">
+   <img src="/public/images/addIncome.png" width="900" />
+</p>
+<p align="center">
+   <img src="/public/images/transations.png" width="900" />
+</p>
+<p align="center">
+   <img src="/public/images/bills.png" width="900" />
+</p>
+<p align="center">
+   <img src="/public/images/addExpense.png" width="500" />
+</p>
+<p align="center">
+   <img src="/public/images/mobile.png" width="500" />
+</p>
+
+<h3>Overview</h3>
+
+This project is a frontend implementation of the assessment requirements. The goal was to build a clean, responsive, and maintainable user interface while demonstrating good frontend development practices.
+
+The application focuses on usability, component reusability, and clear data presentation. The interface allows users to interact with the system easily while keeping the codebase organized and scalable.
+
+<h3>What I Built and Why </h3>
+
+I built this project using Next.js (React) because it provides a powerful framework for building modern web applications with a strong component-based architecture.
+
+Key decisions made during development include:
+
+<ul>
+    <li>Component-Based Architecture</li>
+    <li>The UI was split into reusable components to improve maintainability and allow easier future expansion.</li>
+    <li>State Management with React Hooks</li>
+    <li>Local Storage Persistence</li>
+    <li>Responsive Design</li>
+</ul>
+
+<h3>How to Run the Project Locally</h3>
+
+Follow these steps to run the project on your machine.
+
+```txt
+
+1. Clone the Repository
+   git clone https://github.com/Moroundiya/finance-tracker.git
+2. Navigate to the Project Folder
+   cd finance-tracker
+3. run "npm install"
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000 to see preview in browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<h3>What I Would Improve With More Time </h3>
+    
+If I had more time, I would improve the project by:
 
-## Learn More
+<ul>
+    <li>Improving form validation</li>
+    <li>Improving error handling</li>
+    <li>Adding better animations and micro-interactions</li>
+    <li>Integrating a backend API instead of local storage</li>
+</ul>
 
-To learn more about Next.js, take a look at the following resources:
+<h3>Challenges I Faced</h3>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+One of the main challenges was managing dynamic data updates while keeping the UI responsive and consistent. Ensuring that components updated correctly when data changed required careful state management.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Another challenge was structuring components in a way that kept the codebase clean and reusable without introducing unnecessary complexity.
 
-## Deploy on Vercel
+<h3>Time Spent</h3>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Approximately 13 hours were spent completing this assessment, including planning, development, testing, and documentation.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<h3>Tech Stack </h3>
+
+<ul>
+    <li>React / Next.js</li>
+    <li>TypeScript</li>
+    <li>Tailwind CSS & HeroUI </li>
+    <li>Reacharts Library (for data visualization)</li>
+</ul>

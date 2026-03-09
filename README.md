@@ -58,6 +58,7 @@ Follow these steps to run the project on your machine.
 2. Navigate to the Project Folder
    cd finance-tracker
 3. run "npm install"
+3. run "npm run dev" to preview
 
 ```
 

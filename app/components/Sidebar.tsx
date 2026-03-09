@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useEffect } from "react";
 import logo from "../assets/images/logo.svg";
 import logoCollapse from "../assets/images/logo-collapse.svg";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -11,23 +10,15 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 export const Sidebar = () => {
-	const { collapseNavbar, setCollapseNavbar, fullName } = useAppContext() as {
+	const { collapseNavbar, setCollapseNavbar } = useAppContext() as {
 		collapseNavbar: boolean;
 		setCollapseNavbar: (collapse: boolean) => void;
-		fullName: string;
 	};
 	const location = usePathname();
 
-	useEffect(() => {
-		// if (!fullName) {
-		// 	alert("Please enter your name to continue.");
-		// 	navigate("/");
-		// }
-	}, []);
-
 	return (
 		<>
-			<div className="w-full h-[70px] fixed left-0 bottom-0 bg-[#1a1a1a] rounded-t-2xl z-50 overflow-hidden flex justify-center items-center xl:hidden">
+			<div className="w-full h-17.5 fixed left-0 bottom-0 bg-[#1a1a1a] rounded-t-2xl z-50 overflow-hidden flex justify-center items-center xl:hidden">
 				{sidebar.map((item) => {
 					return (
 						<Link
@@ -58,7 +49,7 @@ export const Sidebar = () => {
 				className={`${
 					collapseNavbar ? "w-[6%]" : "w-1/5"
 				} rounded-r-3xl h-full bg-[#1A1A1A] pt-10 pb-16 flex-col justify-between transition-all duration-300 ease-in-out hidden xl:flex`}>
-				<div className="h-[200px] xl:h-[200px] relative">
+				<div className="h-50 relative">
 					{collapseNavbar ? (
 						<Image
 							src={logoCollapse}
@@ -68,13 +59,13 @@ export const Sidebar = () => {
 					) : (
 						<Image
 							src={logo}
-							className="w-[125px] xl:ms-5 2xl:ms-8 transition-all duration-500 ease-in-out"
+							className="w-31.25 xl:ms-5 2xl:ms-8 transition-all duration-500 ease-in-out"
 							alt="Logo"
 						/>
 					)}
 				</div>
 
-				<div className="h-[290px] flex flex-col text-xl font-semibold w-full -mt-20">
+				<div className="h-72.5 flex flex-col text-xl font-semibold w-full -mt-20">
 					{sidebar.slice(0, 5).map((item) => {
 						return (
 							<Link
@@ -108,7 +99,6 @@ export const Sidebar = () => {
 						);
 					})}
 				</div>
-
 				<div className="h-1/6 text-xl text-[#b3b3b3] font-semibold w-full">
 					<div
 						className={`cursor-pointer h-1/2

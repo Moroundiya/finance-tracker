@@ -13,6 +13,7 @@ const AppContext = createContext({
 export function AppProvider({ children }: { children: React.ReactNode }) {
 	const [collapseNavbar, setCollapseNavbar] = useState(false);
 	const [data, setData] = useState<FinanceData | null>(() => {
+		if (typeof window === "undefined") return;
 		const stored = localStorage.getItem("data");
 		return stored
 			? JSON.parse(stored)

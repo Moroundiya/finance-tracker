@@ -73,21 +73,26 @@ function mapCategory(raw = "") {
 	return null;
 }
 
+interface Transaction {
+	category: string;
+	amount: string | number;
+}
+
 function loadTransactions() {
 	try {
 		const raw = localStorage.getItem("data");
 		if (!raw) return [];
 		const parsed = JSON.parse(raw);
 		const txns = parsed?.transactions ?? [];
-		return txns.filter((tx: any) => tx.category !== "income");
+		return txns.filter((tx: Transaction) => tx.category !== "income");
 	} catch {
 		return [];
 	}
 }
 
-function calcTotals(transactions: any) {
+function calcTotals(transactions: Transaction[]) {
 	const totals = Object.fromEntries(CATEGORIES.map((c) => [c.id, 0]));
-	transactions.forEach((tx: any) => {
+	transactions.forEach((tx: Transaction) => {
 		const catId = mapCategory(tx.category);
 		if (catId) totals[catId] += Number(tx.amount) || 0;
 	});
@@ -99,7 +104,7 @@ const CustomTooltip = ({
 	payload,
 }: {
 	active?: boolean;
-	payload?: any[];
+	payload?: Array<{ payload: { label: string; value: number; color: string } }>;
 }) => {
 	if (!active || !payload?.length) return null;
 	const d = payload[0].payload;
@@ -132,7 +137,7 @@ export default function Chart() {
 	useEffect(() => {
 		refresh();
 		const interval = setInterval(refresh, 1000);
-		const onStorage = (e: any) => {
+		const onStorage = (e: StorageEvent) => {
 			if (e.key === "data") refresh();
 		};
 		window.addEventListener("storage", onStorage);
@@ -175,7 +180,7 @@ export default function Chart() {
 								animationBegin={0}
 								animationDuration={1000}
 								animationEasing="ease-out"
-								onMouseEnter={(d) => setActiveId(d.id)}
+								onMouseEnter={(_, idx) => setActiveId(pieData[idx].id)}
 								onMouseLeave={() => setActiveId(null)}
 								stroke="none">
 								{pieData.map((entry) => (

@@ -6,7 +6,7 @@ import { useAppContext } from "../context/AppContext";
 import { FinanceData } from "../assets/types/data";
 
 export default function Bills() {
-	const { data, collapseNavbar } = useAppContext() as {
+	const { data } = useAppContext() as {
 		data: FinanceData | null;
 		collapseNavbar: boolean;
 	};
@@ -94,8 +94,6 @@ export default function Bills() {
 										</p>
 									</div>
 									<progress
-										min={0}
-										max={100}
 										value={65}
 										className="w-full h-1 rounded-xl overflow-hidden appearance-none"></progress>
 
@@ -129,10 +127,10 @@ export default function Bills() {
 								{data?.transactions
 									?.filter((t) => t.category !== "income")
 									?.slice(0, 5)
-									.map((transaction, index) => (
+									.map((transaction, index, filteredArray) => (
 										<div
 											className={`w-full flex items-center justify-between lg:justify-start font-medium ${
-												index === transaction.length - 1
+												index === filteredArray.length - 1
 													? ""
 													: "border-b border-[#4444448a]"
 											} py-5`}
